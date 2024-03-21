@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a three page portfoilo webpage design and belong to Yiting Zhang.">
+    <title>Tijiena's Page </title>
+    <link rel="stylesheet" href="other.css">
+   
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a>Artwork</a>
+                <ul class="dropdown">
+                    <li><a href="fan_art.html">FanArts</a></li>
+                    <li><a href="oc.html">OCs</a></li>
+                    <li><a href="illstruation.html">Illstruations</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <main>
+       
+        <h2>Illstruations</h2>
+        <div class="three_image">
+            <img src="image/illstruation/1 (1).png" class=center>
+            <img src="image/illstruation/1 (5).png" class="center">
+            <img src="image/illstruation/1 (3).png"  class="center">
+            <img src="image/illstruation/1 (4).png" class=center>
+            <img src="image/illstruation/1 (2).png"  class="center">
+        </div>
+    </main>
+   
+    <script src="scripts/dropdown-menu.js"></script>
+        
+    <script>let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }</script>
+</body>
+</html>

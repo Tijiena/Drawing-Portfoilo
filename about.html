@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a three page portfoilo webpage design and belong to Yiting Zhang.">
+    <title>Tijiena's Page </title>
+    <link rel="stylesheet" href="other.css">
+   
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a>Artwork</a>
+                <ul class="dropdown">
+                    <li><a href="fan_art.html">FanArts</a></li>
+                    <li><a href="oc.html">OCs</a></li>
+                    <li><a href="illstruation.html">Illstruations</a></li>
+                </ul>
+            </li>
+            <li><a href="about/about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <main>
+       
+        <h1>About Myself</h1>
+        <img src="image/me.jpg" alt="A picture of my self" id="me">
+        <p>I am Tina Zhang, a teen with a love for anime and a budding interest in art. While I might not be the next big manga artist, I enjoy sketching in my spare time. Most of my hours are dedicated to my career and studies, but there's always room for anime and a bit of drawing.
+<br><br>
+           I love chilling with some anime or diving into gameplay streams when I do have some free time. These are my go-to ways to unwind and soak in some creativity. I am also a game designer, if you are interesting on that, there is another portfoilo link for you to check!</p><br><br>
+
+<h2>Other links about Me</h2>
+           <a href="https://www.instagram.com/tijienaaa/" id="gamepage">-Instagram Page</a><br>
+            <a href="https://tijiena.itch.io/stay-alive" id="gamepage">-Design Portfoilo Page</a>
+            
+    </main>
+   
+    <script src="scripts/dropdown-menu.js"></script>
+        
+    <script>let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }</script>
+</body>
+</html>

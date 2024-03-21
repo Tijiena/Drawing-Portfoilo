@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a three page portfoilo webpage design and belong to Yiting Zhang.">
+    <title>Tijiena's Page </title>
+    <link rel="stylesheet" href="other.css">
+   
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a>Artwork</a>
+                <ul class="dropdown">
+                    <li><a href="fan_art.html">FanArts</a></li>
+                    <li><a href="oc.html">OCs</a></li>
+                    <li><a href="illstruation.html">Illstruations</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <main>
+       
+        <h2>FanArts</h2>
+        <h3>HaiKyuu</h3>
+        <div class="four_image">
+            <img src="image/fan_art/haikyuu1.jpg" class="center">
+            <img src="image/fan_art/haikyuu2.jpg"  class="center">
+            <img src="image/fan_art/haikyuu7.png" class="center">
+        </div>
+        <div class="four_image">
+            <img src="image/fan_art/haikyuu3.jpg" class="center">
+            <img src="image/fan_art/haikyuu4.jpg" class="center">
+            <img src="image/fan_art/haikyuu5.jpg" class="center">
+            <img src="image/fan_art/haikyuu6.jpg" class="center">
+        </div>
+        <h3>Splatoon</h3>
+        <div class="three_image">
+            <img src="image/fan_art/splatoon1.1.jpg"  class="center">
+            <img src="image/fan_art/splatoon1.2.jpg" class=center>
+            <img src="image/fan_art/splatoon1.3.jpg" class="center">
+            <img src="image/fan_art/splatoon1.png" class="center">
+            <img src="image/fan_art/splatoon2.png" class="center">
+            <img src="image/fan_art/splatoon3.png" class="center">
+        </div>
+        <img src="image/fan_art/splatoon8.png" class="ninty">
+        <h3>Katekyo Hitman Reborn!</h3>
+        <div class="five_image">
+            <img src="image/fan_art/hitman1.jpg"  class="center">
+            <img src="image/fan_art/hitman2.jpg" class=center>
+            <img src="image/fan_art/hitman3.jpg" class="center">
+            <img src="image/fan_art/hitman4.jpg" class="center">
+            <img src="image/fan_art/hitman5.jpg" class="center">
+        </div>
+        <h3>Ensemble Stars</h3>
+         <div class="three_image">
+            <img src="image/fan_art/es.png"  class="center">
+        </div>
+    </main>
+    
+    <script src="scripts/dropdown-menu.js"></script>
+        
+    <script>let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }</script>
+</body>
+</html>
